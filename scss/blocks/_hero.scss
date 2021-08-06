@@ -5,6 +5,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 80px;
 
   &__wrapper {
     max-width: 495px;
@@ -22,7 +23,7 @@
   &__text {
     font-size: 16px;
     line-height: 26px;
-    color: #fefcf7;
+    color: $main-white;
     opacity: 0.8;
     margin: 0;
     margin-bottom: 56px;
@@ -35,7 +36,7 @@
     display: block;
     max-width: 217px;
     padding: 16px 31px;
-    color: #fefcf7;
+    color: $main-white;
     text-align: center;
     background-color: #0e8784;
     border-radius: 6px;

@@ -96,3 +96,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .choose {
+    justify-content: space-between;
+  }
+
+  .middle_choose_box {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

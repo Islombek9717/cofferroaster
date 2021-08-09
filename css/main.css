@@ -159,29 +159,27 @@ a {
 
 .first_section {
   width: 1111px;
-  height: 260px;
   padding: 0;
   margin: 0 auto;
-  background-image: url(./../image/ourcollection.png);
+  background-image: url(./../image/ourcollection.png), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#aaa));
+  background-image: url(./../image/ourcollection.png), linear-gradient(to bottom, #fff, #aaa);
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
   margin-bottom: 370px;
 }
 
 .cards {
-  position: absolute;
-  top: 66px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 59px;
 }
 
 .cards .card {
@@ -189,17 +187,8 @@ a {
   text-align: center;
 }
 
-.cards .card__second {
-  margin-left: 30px;
-  margin-right: 15px;
-}
-
-.cards .card__third {
-  margin-left: 15px;
-  margin-right: 30px;
-}
-
 .cards .card__img {
+  width: 100%;
   margin-bottom: 71px;
 }
 
@@ -219,6 +208,47 @@ a {
   font-size: 16px;
   line-height: 26px;
   color: #333d4b;
+}
+
+@media only screen and (max-width: 768px) {
+  .first_section {
+    width: 768px;
+  }
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cards .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: unset;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+  .cards .card__bottom {
+    width: 282px;
+    text-align: left;
+  }
+  .cards .card__text {
+    max-height: 50px;
+    overflow: hidden;
+  }
+  .cards .card__img {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card__img {
+    width: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
 }
 
 .second_section {
@@ -271,7 +301,6 @@ a {
 
 .boxes .box {
   width: 350px;
-  height: 382px;
   background-color: #0e8784;
   border-radius: 8px;
   padding: 72px 48px 48px 47px;
@@ -296,6 +325,33 @@ a {
   font-size: 16px;
   line-height: 26px;
   color: #fefcf7;
+}
+
+@media only screen and (max-width: 768px) {
+  .boxes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+  }
+  .boxes .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-width: 573px;
+    height: 180px;
+    margin-bottom: 24px;
+  }
+  .boxes .box__img {
+    margin-right: 55px;
+  }
 }
 
 .third_section {
@@ -407,6 +463,18 @@ a {
   color: #333d4b;
 }
 
+@media only screen and (max-width: 768px) {
+  .choose {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .middle_choose_box {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 .footer {
   max-width: 1280px;
   margin: 0 auto;
@@ -437,5 +505,38 @@ a {
 
 .footer .footer__link {
   margin-left: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .footer__img {
+    margin-right: 0;
+  }
+  .footer .footer__nav {
+    margin: 0;
+    padding: 0;
+    margin-top: 33px;
+    margin-bottom: 65px;
+  }
+  .footer .nav__item:nth-child(2) {
+    margin-right: 33px;
+    margin-left: 33px;
+  }
+  .footer .footer__link {
+    margin-left: 0;
+  }
+  .footer .nav__item {
+    margin: 0;
+  }
+  .footer .footer__link:nth-child(2) {
+    margin-right: 24px;
+    margin-left: 24px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

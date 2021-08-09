@@ -41,7 +41,7 @@
 
   .box {
     width: 350px;
-    height: 382px;
+    // height: 382px;
     background-color: #0e8784;
     border-radius: 8px;
     padding: 72px 48px 48px 47px;
@@ -65,6 +65,26 @@
       font-size: 16px;
       line-height: 26px;
       color: $main-white;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .boxes {
+    flex-direction: column;
+    text-align: left;
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 573px;
+      height: 180px;
+      margin-bottom: 24px;
+
+      &__img {
+        margin-right: 55px;
+      }
     }
   }
 }

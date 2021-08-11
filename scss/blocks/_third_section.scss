@@ -98,6 +98,20 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .third_section {
+    max-width: 455px;
+    margin: 0 auto;
+
+    .third-list {
+      &__item::before {
+        margin-right: 202px;
+      }
+    }
+    .third-list::before {
+      width: 467px;
+    }
+  }
+
   .choose {
     justify-content: space-between;
   }

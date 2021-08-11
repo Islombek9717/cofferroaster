@@ -10,13 +10,13 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
+    <header class="header">
+        <div class="container header-container">
             <a href="#" class="header__link">
                 <img class="header__img" src="./image/logo.svg" alt="Logo" width="236" height="26">
             </a>
 
-            <ul class="nav header__nav">
+            <ul class="nav header__nav nav--open" id="nav">
                 <li class="nav__item">
                     <a class="nav__link" href="#">Home</a>
                 </li>
@@ -30,9 +30,12 @@
                 </li>
             </ul> <!-- End of nav -->
 
-        </header> <!-- End of header -->
+            <button class="header__menu menu" id="btn"></button>
+        </div> <!-- End of header-container -->
+    </header> <!-- End of header -->
 
 
+    <div class="container">
         <div class="hero">
             <div class="hero__wrapper">
                 <h1 class="hero__heading">Great coffe made simple.</h1>
@@ -231,6 +234,7 @@
 
     </div><!-- End of container -->
 
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

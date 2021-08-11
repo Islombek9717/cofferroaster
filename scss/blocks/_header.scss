@@ -1,8 +1,12 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 44px 0;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // position: relative;
+  }
 
   &__link:hover {
     opacity: 0.8;
@@ -14,6 +18,21 @@
 
   &__nav {
     display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__menu {
+    display: none;
+    width: 16px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url("./../image/menu.svg");
+    background-size: contain;
+    background-position: 0 0;
+    background-repeat: no-repeat;
   }
 }
 
@@ -31,6 +50,55 @@
 
     &:hover {
       color: #202020;
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .header {
+    padding: 32px 0;
+
+    &__img {
+      width: 163px;
+      height: 18px;
+    }
+
+    .nav {
+      display: none;
+      position: absolute;
+      top: 82px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 10;
+      flex-direction: column;
+      padding-top: 40px;
+      text-align: center;
+      background-image: linear-gradient(to bottom, white 80%, transparent);
+
+      &__item {
+        margin-left: 0;
+        margin-bottom: 32px;
+      }
+
+      &__link {
+        color: #333d4b;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 32px;
+        text-transform: capitalize;
+      }
+
+      &--open {
+        display: flex;
+      }
+      &--open + button.menu {
+        background-image: url("./../image/close.svg");
+      }
+    }
+
+    &__menu {
+      display: flex;
     }
   }
 }

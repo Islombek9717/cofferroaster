@@ -70,6 +70,10 @@ a {
 }
 
 .header {
+  padding: 44px 0;
+}
+
+.header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,7 +83,6 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 44px 0;
 }
 
 .header__link:hover {
@@ -94,6 +97,21 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header__menu {
+  display: none;
+  width: 16px;
+  height: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url("./../image/menu.svg");
+  background-size: contain;
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .nav__item {
@@ -110,6 +128,57 @@ a {
 
 .nav__link:hover {
   color: #202020;
+}
+
+@media only screen and (max-width: 630px) {
+  .header {
+    padding: 32px 0;
+  }
+  .header__img {
+    width: 163px;
+    height: 18px;
+  }
+  .header .nav {
+    display: none;
+    position: absolute;
+    top: 82px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 40px;
+    text-align: center;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(80%, white), to(transparent));
+    background-image: linear-gradient(to bottom, white 80%, transparent);
+  }
+  .header .nav__item {
+    margin-left: 0;
+    margin-bottom: 32px;
+  }
+  .header .nav__link {
+    color: #333d4b;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: capitalize;
+  }
+  .header .nav--open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .nav--open + button.menu {
+    background-image: url("./../image/close.svg");
+  }
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .hero {
@@ -210,9 +279,9 @@ a {
   color: #333d4b;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 630px) {
   .first_section {
-    width: 768px;
+    max-width: 630px;
   }
   .cards {
     -webkit-box-orient: vertical;
@@ -464,6 +533,16 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+  .third_section {
+    max-width: 455px;
+    margin: 0 auto;
+  }
+  .third_section .third-list__item::before {
+    margin-right: 202px;
+  }
+  .third_section .third-list::before {
+    width: 467px;
+  }
   .choose {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
